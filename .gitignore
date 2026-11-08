@@ -1,3 +1,9 @@
 .DS_Store
 .vercel
 node_modules
+qr/
+
+# Tài liệu gốc (ảnh, docx, zip) — web dùng bản đã tối ưu trong assets/images
+/*.jpg
+/*.zip
+/*.docx
