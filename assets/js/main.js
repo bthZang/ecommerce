@@ -133,8 +133,37 @@ function setupNavToggle() {
   });
 }
 
+function setupTabs() {
+  document.querySelectorAll('[data-tabs]').forEach((tabs) => {
+    const buttons = [...tabs.querySelectorAll('[role="tab"]')];
+
+    const select = (active) => {
+      buttons.forEach((btn) => {
+        const on = btn === active;
+        btn.setAttribute('aria-selected', String(on));
+        btn.tabIndex = on ? 0 : -1;
+        document.getElementById(btn.getAttribute('aria-controls')).hidden = !on;
+      });
+    };
+
+    buttons.forEach((btn, i) => {
+      btn.addEventListener('click', () => select(btn));
+      btn.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        const step = e.key === 'ArrowRight' ? 1 : -1;
+        const next = buttons[(i + step + buttons.length) % buttons.length];
+        select(next);
+        next.focus();
+      });
+    });
+
+    select(buttons[0]);
+  });
+}
+
 const page = document.body.dataset.page;
 document.getElementById('site-header').outerHTML = renderHeader(page);
 document.getElementById('site-footer').outerHTML = renderFooter();
 fillSiteData();
 setupNavToggle();
+setupTabs();

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boost Niva – Phân bón hữu cơ | Boost Green Niva</title>
   <meta name="description" content="Boost Niva – phân bón hữu cơ cải tạo đất, kích rễ, cứng cây. Chất hữu cơ 45%, Oligo Fulvic 42%, rong biển, amino acid và vitamin." />
-  <meta property="og:image" content="/assets/images/boost-niva.jpg" />
+  <meta property="og:image" content="/assets/images/boost-niva.webp" />
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,32 +24,48 @@
     </section>
 
     <section class="section">
-      <div class="container product-detail">
-        <div class="product-gallery">
-          <img src="/assets/images/boost-niva.jpg" alt="Phân bón hữu cơ Boost Niva chai 1 lít" />
-        </div>
-
-        <div class="product-summary">
-          <span class="category">Phân bón hữu cơ</span>
-          <h1>Boost Niva</h1>
-          <p class="lead">Cải tạo đất · Kích rễ · Cứng cây. Bổ sung hữu cơ, fulvic, amino, vitamin cho cây phát triển khỏe từ gốc.</p>
-
-          <div class="product-meta">
-            <span>Thể tích thực: 1 lít</span>
-            <span>Bón rễ / tưới rễ</span>
+      <div class="container">
+        <div class="product-detail">
+          <div class="stage">
+            <img src="/assets/images/boost-niva.webp" alt="Phân bón hữu cơ Boost Niva chai 1 lít" />
           </div>
 
-          <div class="price-box">
-            <strong>Giá: Liên hệ</strong>
-            <div class="cta-actions">
-              <a class="btn btn-primary" data-link="tel">Gọi đặt hàng</a>
-              <a class="btn btn-outline" data-link="zalo" target="_blank" rel="noopener">Nhắn Zalo</a>
+          <div class="product-summary">
+            <span class="category">Phân bón hữu cơ</span>
+            <h1>Boost Niva</h1>
+            <p class="lead">Cải tạo đất · Kích rễ · Cứng cây. Bổ sung hữu cơ, fulvic, amino, vitamin cho cây phát triển khỏe từ gốc.</p>
+
+            <div class="product-meta">
+              <span>Thể tích thực: 1 lít</span>
+              <span>Bón rễ / tưới rễ</span>
+            </div>
+
+            <ul class="check-list">
+              <li>Cải tạo đất, giải độc, cân bằng pH.</li>
+              <li>Thúc đẩy phát triển rễ, chồi và lá.</li>
+              <li>Phục hồi sau thu hoạch, tăng năng suất.</li>
+            </ul>
+
+            <div class="price-box">
+              <strong>Giá: Liên hệ</strong>
+              <div class="cta-actions">
+                <a class="btn btn-primary" data-link="tel">Gọi đặt hàng</a>
+                <a class="btn btn-outline" data-link="zalo" target="_blank" rel="noopener">Nhắn Zalo</a>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="detail-block">
-            <h2>Thành phần</h2>
-            <p class="detail-intro">Theo công bố trên nhãn:</p>
+        <div class="tabs" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Thông tin sản phẩm">
+            <button role="tab" id="tab-thanh-phan" aria-controls="panel-thanh-phan">Thành phần</button>
+            <button role="tab" id="tab-cong-dung" aria-controls="panel-cong-dung">Công dụng</button>
+            <button role="tab" id="tab-huong-dan" aria-controls="panel-huong-dan">Hướng dẫn sử dụng</button>
+            <button role="tab" id="tab-bao-quan" aria-controls="panel-bao-quan">Bảo quản</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-thanh-phan" aria-labelledby="tab-thanh-phan">
+            <p>Theo công bố trên nhãn:</p>
             <table class="spec-table">
               <tbody>
                 <tr><th>Chất hữu cơ</th><td>45%</td></tr>
@@ -65,8 +81,7 @@
             </table>
           </div>
 
-          <div class="detail-block">
-            <h2>Công dụng</h2>
+          <div class="tab-panel" role="tabpanel" id="panel-cong-dung" aria-labelledby="tab-cong-dung" hidden>
             <ul class="check-list">
               <li>Cải tạo đất, tăng độ phì nhiêu và cân bằng pH.</li>
               <li>Bổ sung hữu cơ, tăng khả năng hấp thu dinh dưỡng.</li>
@@ -78,9 +93,8 @@
             </ul>
           </div>
 
-          <div class="detail-block">
-            <h2>Hướng dẫn sử dụng</h2>
-            <p class="detail-intro">Phân bón được sử dụng để bón rễ hoặc tưới rễ cho cây trồng.</p>
+          <div class="tab-panel" role="tabpanel" id="panel-huong-dan" aria-labelledby="tab-huong-dan" hidden>
+            <p>Phân bón được sử dụng để bón rễ hoặc tưới rễ cho cây trồng.</p>
             <ul class="usage-list">
               <li>
                 <strong>Cây lương thực:</strong> 800–1.000 lít phân bón/ha/vụ, tưới vào đất trước khi trồng.
@@ -107,11 +121,10 @@
             </div>
           </div>
 
-          <div class="detail-block">
-            <h2>Cảnh báo &amp; bảo quản</h2>
+          <div class="tab-panel" role="tabpanel" id="panel-bao-quan" aria-labelledby="tab-bao-quan" hidden>
             <ul class="check-list">
-              <li>Tránh xa tầm tay trẻ em.</li>
-              <li>Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</li>
+              <li><strong>Cảnh báo:</strong> Tránh xa tầm tay trẻ em.</li>
+              <li><strong>Bảo quản:</strong> Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</li>
             </ul>
           </div>
         </div>
