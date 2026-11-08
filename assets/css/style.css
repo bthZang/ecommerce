@@ -160,17 +160,9 @@ svg {
 }
 
 .logo-mark {
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--green-500), var(--green-700));
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: -1px;
-  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.25);
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -1282,6 +1274,14 @@ a.contact-item:hover {
   color: #fff;
 }
 
+.site-footer .logo-mark {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 50%;
+  background: #fff;
+}
+
 .footer-about {
   margin-top: 18px;
   font-size: 0.95rem;
@@ -1389,7 +1389,22 @@ a.contact-item:hover {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1100px) {
+  .header-inner {
+    gap: 16px;
+  }
+
+  .main-nav a {
+    padding: 8px 8px;
+    font-size: 0.92rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
   .nav-toggle {
     display: flex;
   }
@@ -1415,8 +1430,22 @@ a.contact-item:hover {
 
   .main-nav a {
     padding: 12px;
+    font-size: 1rem;
   }
 
+  .feature,
+  .about-intro,
+  .product-detail,
+  .why {
+    gap: 40px;
+  }
+
+  .product-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 860px) {
   .feature,
   .about-intro,
   .product-detail,
@@ -1426,22 +1455,21 @@ a.contact-item:hover {
     gap: 36px;
   }
 
+  .stage,
+  .why-media {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .about-visual {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
   .why-badge {
     left: 16px;
     bottom: 16px;
-  }
-
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .highlight + .highlight {
-    border-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .values-grid,
@@ -1455,6 +1483,36 @@ a.contact-item:hover {
 
   .footer-grid > :first-child {
     grid-column: 1 / -1;
+  }
+
+  .product-card-body {
+    padding: 16px 16px 20px;
+  }
+
+  .product-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight + .highlight {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .product-card-actions {
+    flex-direction: row;
   }
 }
 
@@ -1482,13 +1540,8 @@ a.contact-item:hover {
   .about-cards,
   .values-grid,
   .topic-grid,
-  .product-grid,
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-
-  .logo-text {
-    font-size: 1rem;
   }
 
   .tab-panel {

@@ -39,7 +39,7 @@ const ICONS = {
 
 const logo = `
   <a class="logo" href="/" aria-label="${SITE.name} - Trang chủ">
-    <span class="logo-mark">BG</span>
+    <img class="logo-mark" src="/assets/images/logo.webp" alt="" width="52" height="52" />
     <span class="logo-text">BOOST GREEN <b>NIVA</b></span>
   </a>`;
 
